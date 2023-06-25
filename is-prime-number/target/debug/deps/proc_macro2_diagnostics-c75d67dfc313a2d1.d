@@ -1,0 +1,10 @@
+/Users/sem/dev/is-prime-number/is-prime-number/target/debug/deps/proc_macro2_diagnostics-c75d67dfc313a2d1.rmeta: /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/lib.rs /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/ext.rs /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/diagnostic.rs /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/line.rs
+
+/Users/sem/dev/is-prime-number/is-prime-number/target/debug/deps/libproc_macro2_diagnostics-c75d67dfc313a2d1.rlib: /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/lib.rs /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/ext.rs /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/diagnostic.rs /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/line.rs
+
+/Users/sem/dev/is-prime-number/is-prime-number/target/debug/deps/proc_macro2_diagnostics-c75d67dfc313a2d1.d: /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/lib.rs /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/ext.rs /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/diagnostic.rs /Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/line.rs
+
+/Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/lib.rs:
+/Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/ext.rs:
+/Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/diagnostic.rs:
+/Users/sem/.cargo/registry/src/index.crates.io-6f17d22bba15001f/proc-macro2-diagnostics-0.10.0/src/line.rs:
