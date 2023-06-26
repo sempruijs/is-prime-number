@@ -10,7 +10,7 @@ use std::time::SystemTime;
 struct NumberResponse {
     numebr: u64,
     is_prime: bool,
-    execution_time: u128,
+    execution_time_in_micros: u128,
 }
 
 #[get("/")]
@@ -18,8 +18,8 @@ fn index() -> &'static str {
     "This is a test"
 }
 
-fn is_prime_number(n: u32) -> bool {
-    let numbers: Vec<u32> = (2..n).collect();
+fn is_prime_number(n: u64) -> bool {
+    let numbers: Vec<u64> = (2..n).collect();
     for number in numbers {
         if n % number == 0 {
             return false;
@@ -29,6 +29,17 @@ fn is_prime_number(n: u32) -> bool {
     true
 }
 
+#[get("/isPrime?<n>")]
+fn get_is_prime(n: u64) -> Json<NumberResponse> {
+    let now = SystemTime::now();
+
+    Json(NumberResponse {
+        numebr: n,
+        is_prime: is_prime_number(n),
+        execution_time_in_micros: now.elapsed().unwrap().as_micros(),
+    })
+}
+
 #[rocket::main]
 async fn main() {
     let mut config = rocket::config::Config::default();
@@ -36,7 +47,7 @@ async fn main() {
 
     let _ = rocket::build()
         .configure(config)
-        .mount("/", routes![index])
+        .mount("/", routes![index, get_is_prime])
         .launch()
         .await;
 }
