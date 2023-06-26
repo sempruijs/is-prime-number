@@ -1,5 +1,5 @@
 {
-  description = "Rust flake template";
+  description = "Is prime number rust backend";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -29,7 +29,7 @@
               extensions = [ "rust-src" "rust-analyzer" "clippy" ];
             };
             default = crane.stable.buildPackage {
-              src = ./.;
+              src = ./is-prime-number;
               cargoBuildCommand = "cargo build --release";
               buildInputs = pkgs.lib.optionals pkgs.stdenv.isDarwin (with pkgs.darwin.apple_sdk.frameworks; [ Security ]);
             };
@@ -37,7 +37,7 @@
           devShells = {
             default = pkgs.mkShell {
               buildInputs = [ self'.packages.rust-stable ]
-                ++ (with pkgs; [ bacon rnix-lsp hyperfine cargo-flamegraph ])
+                ++ (with pkgs; [ bacon rnix-lsp hyperfine cargo-flamegraph docker-client])
                 ++ (pkgs.lib.optionals pkgs.stdenv.isDarwin (with pkgs.darwin.apple_sdk.frameworks; [ Security ]));
             };
           };
