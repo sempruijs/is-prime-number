@@ -35,7 +35,6 @@
               buildInputs = pkgs.lib.optionals pkgs.stdenv.isDarwin (with pkgs.darwin.apple_sdk.frameworks; [ Security ]);
             };
             image = pkgs.dockerTools.buildLayeredImage {
-              architecture = "x86_64-linux";
               name = "is-prime-number";
               config.Cmd = [ "${bin}/bin/is-prime-number"];
             };
