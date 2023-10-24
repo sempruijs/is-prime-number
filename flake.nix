@@ -24,14 +24,20 @@
             stable = lib.overrideToolchain self'.packages.rust-stable;
           };
         in {
-          packages = {
+          packages = rec {
             rust-stable = inputs'.rust-overlay.packages.rust.override {
               extensions = [ "rust-src" "rust-analyzer" "clippy" ];
             };
-            default = crane.stable.buildPackage {
+            default = bin;
+            bin = crane.stable.buildPackage {
               src = ./is-prime-number;
               cargoBuildCommand = "cargo build --release";
               buildInputs = pkgs.lib.optionals pkgs.stdenv.isDarwin (with pkgs.darwin.apple_sdk.frameworks; [ Security ]);
+            };
+            image = pkgs.dockerTools.buildLayeredImage {
+              architecture = "x86_64-linux";
+              name = "is-prime-number";
+              config.Cmd = [ "${bin}/bin/is-prime-number"];
             };
           };
           devShells = {
